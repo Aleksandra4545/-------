@@ -22,6 +22,12 @@ void swapElements(int (&arr)[10], int index1, int index2) {
     arr[index2] = temp;        // vtoray zamena
 }
 
+void multiplyByTwo(int (&arr)[10]) {
+    for (int& x : arr) {
+        x *= 2;
+    }
+}
+
 int main() { // chtoby zapustilos
     // ...
 }
