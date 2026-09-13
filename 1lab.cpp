@@ -28,6 +28,25 @@ void multiplyByTwo(int (&arr)[10]) {
     }
 }
 
-int main() { // chtoby zapustilos
-    // ...
+int main() { 
+    int arr[10]; // sozdaem massiv
+
+    fillArray(arr); // zapolniaem
+
+    cout << "Исходный массив: ";
+    printArray(arr);
+
+    swapElements(arr, 0, 1); // meniaem 0 i 1 el.
+
+    cout << "После обмена 1 и 2 элементов: ";
+    printArray(arr);
+
+    multiplyByTwo(arr); // umnozaem
+    
+    cout << "После умножения всех элементов на 2: ";
+    printArray(arr);
+
+    return 0;
+
+
 }
