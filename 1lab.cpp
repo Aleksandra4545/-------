@@ -9,3 +9,10 @@ void fillArray(int (&arr)[10]) {      // arr ssilka na massiv is 10 el.
     }
 }
 
+void printArray(const int (&arr)[10]) {
+    for (int x : arr) {
+        cout << x << " ";
+    }
+    cout << endl;
+}
+
