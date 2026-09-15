@@ -42,6 +42,37 @@ void process(int*& arr, int size) {
 }
 
 int main() {
-    // ...
+    int size;
+
+    cout << "Введите размер массива: ";
+    cin >> size;
+
+    int* arr = new int[size]{}; // выдел. динам. память
+
+    cout << "Введите элементы массива: " << endl; // заполн. массив
+
+    for (int i = 0; i < size; i++) {
+        cin >> arr[i];
+    }
+
+    cout << "Исходный массив: ";  // вывод. исход. массив
+
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+
+    cout << endl;
+
+    process(arr, size);
+
+    delete[] arr;
+
+    arr = nullptr;
+
+    if (arr == nullptr) {
+        cout << "Указатель arr обнулен" << endl;
+    }
+
+    return 0;
 }
 
