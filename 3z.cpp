@@ -38,6 +38,25 @@ void printSafe(const SafeArray& arr) {
     cout << endl;
 }
 
+void reSizeArray(SafeArray& arr, int newSize) {
+    int* newData = new int[newSize]{};
+
+    int minSize;
+
+    if (arr.size < newSize)
+        minSize = arr.size;
+    else
+        minSize = newSize;
+    for (int i = 0; i < minSize; i++) {
+        newData[i] = arr.data[i];
+    }
+
+    delete[] arr.data;
+
+    arr.data = newData;
+    arr.size = newSize;
+}
+
 
 int main() {
     //..
