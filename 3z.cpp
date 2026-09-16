@@ -17,7 +17,7 @@ void createArray(SafeArray& arr, int size) { //сщздание массива
     }
 }
 
-int& getElement(SafeArray& arr, int index) {
+int& getElement(SafeArray& arr, int index) { // безопас. получ. эл.
     static int dummy = 0;
 
     if (index >= 0 && index < arr.size) {
@@ -29,6 +29,14 @@ int& getElement(SafeArray& arr, int index) {
     return dummy;
 }
 
+void printSafe(const SafeArray& arr) {
+    cout << "Массив: ";
+
+    for (int i = 0; i < arr.size; i++) {
+        cout << arr.data[i] << " ";
+    }
+    cout << endl;
+}
 
 
 int main() {
