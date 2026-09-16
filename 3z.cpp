@@ -57,7 +57,37 @@ void reSizeArray(SafeArray& arr, int newSize) {
     arr.size = newSize;
 }
 
-
 int main() {
-    //..
+    SafeArray arr;
+
+    int size;
+
+    cout << "Введите размер массива: ";
+    cin >> size;
+
+    createArray(arr, size);
+
+    printSafe(arr);
+
+    int index;
+
+    cout << "Введите индекс элемета: ";
+    cin >> index;
+
+    cout << "Элемет: " << getElement(arr, index) << endl;
+
+    int newSize;
+
+    cout << "Введите новый размер массива: ";
+    cin >> newSize;
+    
+    reSizeArray(arr, newSize);
+
+    printSafe(arr);
+
+    delete[] arr.data;
+    arr.data = nullptr;
+
+    return 0;
+
 }
