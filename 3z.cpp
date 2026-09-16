@@ -17,6 +17,20 @@ void createArray(SafeArray& arr, int size) { //сщздание массива
     }
 }
 
+int& getElement(SafeArray& arr, int index) {
+    static int dummy = 0;
+
+    if (index >= 0 && index < arr.size) {
+        return arr.data[index];
+    }
+
+    cout << "Ошибка: индекс находится вне границ массива" << endl;
+
+    return dummy;
+}
+
+
+
 int main() {
     //..
 }
