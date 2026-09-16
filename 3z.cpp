@@ -1,4 +1,6 @@
 #include <iostream>
+#include <windows.h>
+
 using namespace std;
 
 struct SafeArray {
@@ -58,6 +60,10 @@ void reSizeArray(SafeArray& arr, int newSize) {
 }
 
 int main() {
+
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+
     SafeArray arr;
 
     int size;
